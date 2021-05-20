@@ -1,8 +1,9 @@
 package com.javastart.account;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class AccountApplication {
         public static void main(String[] args) {
-                System.out.println("ку");
-                System.out.println("feature-account-service-checkout");
         }
 }
