@@ -1,4 +1,4 @@
-package com.javastart.account.exceptiopn;
+package com.javastart.account.exception;
 
 public class AccountNotFoundException extends RuntimeException{
 
