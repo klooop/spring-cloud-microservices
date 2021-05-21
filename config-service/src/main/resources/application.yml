@@ -1,15 +1,14 @@
 spring:
-    cloud:
-      config:
-        server:
-          native:
-#            говорим, что другие конфигурации будут лежать в папке services
-            search-locations: classpath:/services
-    profiles:
-      active: native
-    security:
-      user:
-        password: admin
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/services
+  profiles:
+    active: native
+  security:
+    user:
+      password: admin
 
-  server:
-    port: 8001
+server:
+  port: 8001
