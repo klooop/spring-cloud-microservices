@@ -4,7 +4,7 @@ spring:
     name: registry
   cloud:
     config:
-      uri: http://localhost:8001
+      uri: http://192.168.1.59:8001
       fail-fast: true
       password: admin
       username: user
