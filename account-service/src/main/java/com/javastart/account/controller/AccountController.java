@@ -19,15 +19,15 @@ public class AccountController {
     }
     @PostMapping("/")
     public Long createAccount(@RequestBody AccountRequestDTO accountRequestDTO) {
-        return accountService.createAccount(accountRequestDTO.getName(),  accountRequestDTO.getEmail(),
-                accountRequestDTO.getPhone(), accountRequestDTO.getBills());
+        return accountService.createAccount(accountRequestDTO.getName(),  accountRequestDTO.getPhone(),
+                accountRequestDTO.getEmail(), accountRequestDTO.getBills());
     }
     @PutMapping("/{accountId}")
     public AccountResponseDTO updateAccount(@PathVariable Long accountId,
                                             @RequestBody AccountRequestDTO accountRequestDTO) {
         return new AccountResponseDTO(accountService.updateAccount(accountId,
-                accountRequestDTO.getName(), accountRequestDTO.getEmail(),
-                accountRequestDTO.getPhone(), accountRequestDTO.getBills()));
+                accountRequestDTO.getName(), accountRequestDTO.getPhone(),
+                accountRequestDTO.getEmail(), accountRequestDTO.getBills()));
     }
 
     @DeleteMapping("/{accountId}")

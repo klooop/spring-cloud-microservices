@@ -21,18 +21,18 @@ public class AccountService {
         return accountRepository.findById(accountId)
                 .orElseThrow(()->new AccountNotFoundException("Unable to find account with id: "+accountId));
     }
-    public Long createAccount(String name, String email, String phone, List<Long> bills) {
-        Account account = new Account(name,email, phone, OffsetDateTime.now(),bills);
+    public Long createAccount(String name, String phone, String email, List<Long> bills) {
+        Account account = new Account(name,phone, email, OffsetDateTime.now(),bills);
         return accountRepository.save(account).getAccountId();
     }
 
     public Account updateAccount(Long acccountId, String name,
-                                 String email, String phone, List<Long> bills) {
+                                 String phone, String email, List<Long> bills) {
         Account account = new Account();
         account.setAccountId(acccountId);
         account.setName(name);
-        account.setEmail(email);
         account.setPhone(phone);
+        account.setEmail(email);
         account.setCreationDate(OffsetDateTime.now());
         account.setBills(bills);
         return accountRepository.save(account);

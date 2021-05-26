@@ -1,6 +1,5 @@
 spring:
   application:
-    #      очень важно указывать имя (ниже написано)
     name: notification-service
   cloud:
     config:
