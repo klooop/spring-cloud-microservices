@@ -4,7 +4,7 @@ spring:
     name: deposit-service
   cloud:
     config:
-      uri: http://localhost:8001
+      uri: http://config-service:8001
       fail-fast: true
       password: admin
       username: user
